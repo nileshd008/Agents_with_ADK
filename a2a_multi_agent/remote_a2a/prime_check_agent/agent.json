@@ -1,0 +1,36 @@
+{
+    "capabilities": {},
+    "defaultInputModes": [
+        "text/plain"
+    ],
+    "defaultOutputModes": [
+        "text/plain"
+    ],
+    "description": "Checks weather given integers are prime",
+    "name": "check_prime_agent",
+    "preferredTransport": "JSONRPC",
+    "protocolVersion": "0.3.0",
+    "skills": [
+        {
+            "description": "Checks weather given integers are prime \n        I am a prime-checking specialist.\n        Given a number, I will check all primary numbers present upto that number.\n    ",
+            "examples": [],
+            "id": "check_prime_agent",
+            "name": "model",
+            "tags": [
+                "llm"
+            ]
+        },
+        {
+            "description": "Call self as a function.",
+            "id": "check_prime_agent-check_prime",
+            "name": "check_prime",
+            "tags": [
+                "llm",
+                "tools"
+            ]
+        }
+    ],
+    "supportsAuthenticatedExtendedCard": false,
+    "url": "http://localhost:8001/a2a/prime_check_agent",
+    "version": "0.0.1"
+}

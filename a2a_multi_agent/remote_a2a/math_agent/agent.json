@@ -1,0 +1,36 @@
+{
+    "capabilities": {},
+    "defaultInputModes": [
+        "text/plain"
+    ],
+    "defaultOutputModes": [
+        "text/plain"
+    ],
+    "description": "Remote A2A agent that evaluates arithmatic expression safely",
+    "name": "math_agent",
+    "preferredTransport": "JSONRPC",
+    "protocolVersion": "0.3.0",
+    "skills": [
+        {
+            "description": "Remote A2A agent that evaluates arithmatic expression safely \n    I am MathAgent, For any calculation request, ALWAYS call tool `safety_calculation` and return result.\n    After receiving tool result, I MUST respond with finl plain-text answer.\n    never end my response with only a tool call.\n",
+            "examples": [],
+            "id": "math_agent",
+            "name": "model",
+            "tags": [
+                "llm"
+            ]
+        },
+        {
+            "description": "Evaluate a simple arithmatic expression safely.\nSupported: +, -, *, /, //, %, **, parentheses, unary +/-.",
+            "id": "math_agent-safe_calculation",
+            "name": "safe_calculation",
+            "tags": [
+                "llm",
+                "tools"
+            ]
+        }
+    ],
+    "supportsAuthenticatedExtendedCard": false,
+    "url": "http://localhost:8001/a2a/math_agent",
+    "version": "0.0.1"
+}
